@@ -1,0 +1,2 @@
+birinchi git bashda branch auto-pull.sh deb yozib olinadi 
+
