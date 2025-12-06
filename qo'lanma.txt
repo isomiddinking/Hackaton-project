@@ -1,2 +1,12 @@
 birinchi git bashda branch auto-pull.sh deb yozib olinadi 
 
+git checkout -b isomiddin
+git push -u origin isomiddin
+
+git checkout main
+git checkout -b Javohir
+git push -u origin Javohir
+
+git checkout main
+git checkout -b Muhiddin
+git push -u origin Muhiddin
