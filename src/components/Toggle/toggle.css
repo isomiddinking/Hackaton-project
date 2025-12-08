@@ -1,0 +1,30 @@
+.toggle-checkbox {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  box-sizing: content-box;
+}
+.toggle {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #04f;
+  right: 50%;
+  transition: all 0.3s;
+  box-sizing: content-box;
+}
+.toggle-switch {
+  border: solid 2px #04f;
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 3px;
+  width: 40px;
+  height: 20px;
+  box-sizing: content-box;
+}
+.toggled .toggle {
+  right: 3px;
+  box-sizing: content-box;
+}

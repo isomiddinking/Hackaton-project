@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+ul {
+  list-style-type: none;
+}
+body {
+  overflow-x: hidden;
+  background-color: #fff;
+}
