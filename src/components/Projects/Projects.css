@@ -1,3 +1,12 @@
+.container > h2 {
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
+.container > p {
+    margin-bottom: 15px;
+    margin-left: 40px;
+    color: #A0AEC0;
+}
 .card_container {
   display: flex;
   flex-wrap: wrap;
@@ -5,45 +14,77 @@
   justify-content: center;
   margin-top: 30px;
 }
-
-.card{
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
 }
-
-.AddBtn{
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+.card-content{
+    padding: 40px 10px;
 }
-
+.card p {
+  color: #a0aec0;
+}
+.card h3 {
+  font-size: 25px;
+  margin: 20px 0;
+}
+.AddBtn {
+  border: 1px solid #e0e1e2;
+  width: 437px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #718096;
+  gap: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  height: 460px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+a {
+  text-decoration: none;
+}
+.AddBtn .icon {
+  font-size: 40px;
+}
 .container {
   padding: 20px;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.card > img {
+  width: 100%;
+  border-radius: 15px;
+  height: 190px;
 }
 
-.editBtn{
-    margin-right: 10px;
-    color: black;
-    font-size: 20px;
+.editBtn {
+  margin-right: 10px;
+  color: black;
+  font-size: 20px;
 }
 
-.delete-btn{
-    color: red;
-    font-size: 20px;
-    cursor: pointer;
+.delete-btn {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.card-bottom button {
+  color: #4fd1c5;
+  border: 1px solid #4fd1c5;
+  background: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+.card-bottom img {
+  width: 58px;
 }

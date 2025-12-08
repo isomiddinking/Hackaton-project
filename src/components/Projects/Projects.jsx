@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Projects.css";
 import { Link } from "react-router-dom";
-import { BiEdit, BiTrash } from "react-icons/bi";
-import Header from "../../pages/Header";
+import { BiEdit, BiPlus, BiTrash } from "react-icons/bi";
 
 const Projects = () => {
   const [data, setData] = useState([]);
@@ -12,8 +11,8 @@ const Projects = () => {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://dummyjson.com/products");
-      setData(res.data.products);
+      const res = await axios.get("http://localhost:5000/projects/getAll");
+      setData(res.data);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -27,7 +26,7 @@ const Projects = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://dummyjson.com/products`);
+      await axios.delete(`http://localhost:5000/projects/delete${id}`);
       setData(data.filter((item) => item.id !== id));
     } catch (err) {
       console.error("Delete error:", err);
@@ -39,28 +38,27 @@ const Projects = () => {
 
   return (
     <div className="container">
-      <Header/>
-      <Link to={"/add"} className="AddBtn">
-        Qo'shish
-      </Link>
+      <h2>Projects</h2>
+      <p>Architects design houses</p>
       <div className="card_container">
         {data.map((item) => (
           <div key={item.id} className="card">
-            <img src={item.images } alt={item.name} />
-            <p>{item.title}</p> 
-            <h2>{item.category}</h2>
-            <p>{item.description}</p>
-            <div className="card_buttons">
-              <Link to={`/edit/${item.id}`} className="editBtn">
-                <BiEdit />
-              </Link>
-              <BiTrash
-                className="delete-btn"
-                onClick={() => handleDelete(item.id)}
-              />
+            <img src={item.image} alt={item.name} />
+            <div className="card-content">
+              <p>{item.subtitle}</p>
+              <h3>{item.name}</h3>
+              <p>{item.description}</p>
+              <div className="card-bottom">
+                <button>VIEW ALL</button>
+                <img src="/src/assets/users-img.png" alt="users-img" />
+              </div>
             </div>
           </div>
         ))}
+        <Link to={"/add"} className="AddBtn">
+          <BiPlus className="icon" />
+          Create a new project
+        </Link>
       </div>
     </div>
   );
