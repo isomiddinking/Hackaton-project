@@ -1,6 +1,6 @@
 import React from "react";
-import { FaFacebook, FaApple } from "react-icons/fa";
-import toggleSwitch from "./../components/ToggleSwitch/toggleSwitch";
+import { FaFacebook, FaApple, FaGoogle } from "react-icons/fa";
+import Toggle from "../components/Toggle/Toggle";
 
 const Signup = () => {
   return (
@@ -43,7 +43,7 @@ const Signup = () => {
             <input type="password" placeholder="Your password" />
           </div>
           <div className="form-box">
-            <toggleSwitch />
+            <Toggle />
             <span>Remember me</span>
           </div>
         </div>

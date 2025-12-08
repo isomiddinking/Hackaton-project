@@ -6,11 +6,10 @@ Toggle.propTypes = {
   name: PropTypes.string,
   checked: PropTypes.bool,
 };
-import "./toggleSwitch.css";
-const toggleSwitch = (props) => {
+import "./toggle.css";
+export default function Toggle(props) {
   const toggle = useRef();
   const checkbox = useRef();
-
   function handleToggle() {
     if (props.onChange) props.onChange();
     toggle.current.classList.toggle("toggled");
@@ -19,10 +18,10 @@ const toggleSwitch = (props) => {
   return (
     <>
       <input
-        type="checkbox"
-        ref="checkbox"
-        name="props.name"
+        ref={checkbox}
+        name={props.name}
         className="toggle-checkbox"
+        type="checkbox"
         defaultChecked={props.value}
         value={props.value || false}
       />
@@ -35,6 +34,4 @@ const toggleSwitch = (props) => {
       </span>
     </>
   );
-};
-
-export default toggleSwitch;
+}
