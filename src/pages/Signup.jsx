@@ -1,16 +1,16 @@
 import React from "react";
 import { FaFacebook, FaApple, FaGoogle } from "react-icons/fa";
 import Toggle from "../components/Toggle/Toggle";
+import "./Signup.css";
 
 const Signup = () => {
   return (
     <div className="signup">
       <div className="signup__bg">
-        <img src="/src/assets/signup-bg.png" alt="signup-bg" />
         <h1>Welcome!</h1>
         <p>
-          Use these awesome forms to login or create new account in your project
-          for free.
+          Use these awesome forms to login or create new <br /> account in your
+          project for free.
         </p>
       </div>
       <form className="signup-form">
@@ -42,14 +42,14 @@ const Signup = () => {
             <label htmlFor="password">Password</label>
             <input type="password" placeholder="Your password" />
           </div>
-          <div className="form-box">
+          <div className="form-toggle">
             <Toggle />
             <span>Remember me</span>
           </div>
         </div>
-        <button>Sign Up</button>
+        <button className="signup__button">Sign Up</button>
         <h2>
-          Already have an account? <span>Sign in</span>
+          Already have an account? <a href="#">Sign in</a>
         </h2>
       </form>
     </div>

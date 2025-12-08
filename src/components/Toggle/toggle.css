@@ -9,13 +9,13 @@
   width: 20px;
   position: absolute;
   border-radius: 10px;
-  background-color: #04f;
+  background-color: #4fd1c5;
   right: 50%;
   transition: all 0.3s;
   box-sizing: content-box;
 }
 .toggle-switch {
-  border: solid 2px #04f;
+  border: solid 2px #4fd1c5;
   position: relative;
   display: inline-block;
   border-radius: 20px;
@@ -27,4 +27,28 @@
 .toggled .toggle {
   right: 3px;
   box-sizing: content-box;
+  background-color: #fff;
+}
+.toggled {
+  background-color: #4fd1c5;
+}
+.signup__button {
+  margin-top: 36px;
+  border-radius: 12px;
+  padding: 18px 0;
+  width: 100%;
+  color: #fff;
+  background-color: #4fd1c5;
+  border: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.signup-form h2 {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #a0aec0;
+}
+.signup-form h2 a {
+  color: #4fd1c5;
+  text-decoration: none;
 }
