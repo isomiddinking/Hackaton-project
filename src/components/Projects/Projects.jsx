@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Projects.css";
 import { Link } from "react-router-dom";
 import { BiEdit, BiTrash } from "react-icons/bi";
+import Header from "../../pages/Header";
 
 const Projects = () => {
   const [data, setData] = useState([]);
@@ -38,6 +39,7 @@ const Projects = () => {
 
   return (
     <div className="container">
+      <Header/>
       <Link to={"/add"} className="AddBtn">
         Qo'shish
       </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import { FaUser } from "react-icons/fa";
 import { IoIosNotifications, IoIosSettings } from "react-icons/io";
 import { IoCube } from "react-icons/io5";
-import { NavLink, Route, Router } from "react-router-dom";
+import { Link, NavLink, Route, Router } from "react-router-dom";
 import "./header.css";
 const Header = () => {
   return (
@@ -10,14 +10,14 @@ const Header = () => {
       <header className="header">
         <span>Billing</span>
         <nav>
-          <a href="#">
+          <Link to={'/profile'}>
             <FaUser className="icon user" />
             Profile
-          </a>
-          <a href="#">
+          </Link>
+          <Link to={'/biling'}>
             <IoCube className="icon user" />
             Billing
-          </a>
+          </Link>
         </nav>
         <div className="right">
           <button>
