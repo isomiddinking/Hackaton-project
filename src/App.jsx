@@ -3,12 +3,12 @@ import { Routes, Route } from "react-router-dom";
 import Projects from "./components/Projects/Projects";
 import Signup from "./pages/Signup";
 import ProductForm from "./components/AddForm/AddForm";
-import Billing from "./pages/Header";
+import Profile from "./pages/Profile";
 
 const App = () => {
   return (
     <div>
-      <Billing />
+      <Profile />
       {/* <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="/register" element={<Signup />} />

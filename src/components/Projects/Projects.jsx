@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Projects.css";
 import { Link } from "react-router-dom";
-import { BiEdit, BiTrash } from "react-icons/bi";
+import { BiEdit, BiPlus, BiTrash } from "react-icons/bi";
 
 const Projects = () => {
   const [data, setData] = useState([]);
@@ -38,27 +38,28 @@ const Projects = () => {
 
   return (
     <div className="container">
-      <Link to={"/add"} className="AddBtn">
-        Qo'shish
-      </Link>
+      <h2>Projects</h2>
+      <p>Architects design houses</p>
       <div className="card_container">
         {data.map((item) => (
           <div key={item.id} className="card">
-            <img src={item.images } alt={item.name} />
-            <p>{item.title}</p> 
-            <h2>{item.category}</h2>
-            <p>{item.description}</p>
-            <div className="card_buttons">
-              <Link to={`/edit/${item.id}`} className="editBtn">
-                <BiEdit />
-              </Link>
-              <BiTrash
-                className="delete-btn"
-                onClick={() => handleDelete(item.id)}
-              />
+            <img src={item.images} alt={item.name} />
+            <div className="card-content">
+              <p>Project</p>
+              <h3>{item.title}</h3>
+              {/* <h2>{item.category}</h2> */}
+              <p>{item.description}</p>
+              <div className="card-bottom">
+                <button>VIEW ALL</button>
+                <img src="/src/assets/users-img.png" alt="users-img" />
+              </div>
             </div>
           </div>
         ))}
+        <Link to={"/add"} className="AddBtn">
+          <BiPlus className="icon" />
+          Create a new project
+        </Link>
       </div>
     </div>
   );
